@@ -6,9 +6,8 @@ import { SocialIcon } from "react-social-icons"
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 const Team=()=>{
     const [oc,setOc]=useState(false)
-    const gradient=useColorModeValue("linear-gradient(to top, #cbd5e0, #d8dde6, #e3e5ec, #eeeef1, #f7f7f7)",
+    const gradient=useColorModeValue("linear-gradient(to bottom, #cbd5e0, #d5dee7, #e0e8ee, #ebf1f5, #f7fafc)",
     "linear-gradient(to top, #1a202c, #151c29, #101826, #0b1324, #040d21)")
-
     const highCol=useColorModeValue("#1A202C","cyan")
     const lowCol=useColorModeValue("#A0AEC0","#4A5568")
     return <div  style={{textAlign:"center",transition:"ease-in",transitionDuration:"500",
@@ -58,6 +57,8 @@ export default Team
 
 
 const CC=()=>{
+    const bg=useColorModeValue("#F6F6F6","#1A202C")
+
     const core=[
         {name:"Aditya Kumar", pic:"/assets/team/aditya.jpg",role:"President",gif:"/assets/rickroll.gif",
         socials:["https://open.spotify.com/playlist/4HjYoerAnBT2qXCNLY6GwH?si=843a3f65305f43b7",
@@ -79,14 +80,14 @@ const CC=()=>{
                     flipOnClick={false} // default false
                     flipDirection="horizontal" // horizontal or vertical
                     >
-                    <FrontSide style={{padding:"0px"}}>
-                        <Image src={c.pic}  bg="grey" width="200px" height="200px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/200"></Image>
+                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                        <Image src={c.pic}  bg="grey" width="200px" height="200px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/150/"+(bg.substring(1))}></Image>
                         <p style={{marginTop:"10px"}} className="body2 ">{c.name}</p>
                         <p style={{marginTop:"10px"}} className="body lighttext">{c.role}</p>
 
                     </FrontSide>
-                    <BackSide style={{padding:"0px"}}>
-                    <Image src={c.gif}  bg="grey" width="200px" height="200px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/200"></Image>
+                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                    <Image src={c.gif}  bg="grey" width="200px" height="200px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/150/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center" style={{padding:"3px"}}>
                             {
                                 c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
@@ -100,6 +101,8 @@ const CC=()=>{
 }
 
 const OC=()=>{
+    const bg=useColorModeValue("#F6F6F6","#1A202C")
+
     const oc=[
         {name:"Ananya Hebbar", pic:"/assets/team/ananya.jfif",socials:["https://www.linkedin.com/in/ananya-hebbar-5750211b4"]
         ,gif:"https://i.pinimg.com/originals/2d/62/74/2d6274213eb306e8852347482da1310b.gif"},
@@ -141,17 +144,21 @@ return <> <div className="d-none d-md-block">
                 return <motion.div  className="col-auto"  style={{margin:"10px 2px"}}
                 initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
                     <Flippy
+                    style={{boxShadow:" 0 0px 0px 0 yellow"}}
                     flipOnHover={true} // default false
                     flipOnClick={true} // default false
                     flipDirection="horizontal" // horizontal or vertical
                     >
-                    <FrontSide style={{padding:"0px",shadow:"",zIndex:0}}>
-                        <Image src={c.pic}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <FrontSide style={{padding:"0px",shadow:"",zIndex:0,boxShadow:" 0 0px 0px 0 yellow"}}>
+                        <Image src={c.pic}  bg="grey" width="130px" height="130px" borderRadius="lg"
+                        fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}
+                         ></Image>
                         <p style={{margin:"20px 2px"}} className="body2 small">{c.name}</p>
 
                     </FrontSide>
-                    <BackSide style={{padding:"0px"}}>
-                        <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                        <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" 
+                        fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
                         <div className="row justify-content-center">
                             {
                                 c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
@@ -179,13 +186,13 @@ return <> <div className="d-none d-md-block">
                     flipOnClick={true} // default false
                     flipDirection="horizontal" // horizontal or vertical
                     >
-                    <FrontSide style={{padding:"0px"}}>
-                        <Image src={c.pic}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                        <Image src={c.pic}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
                         <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
 
                     </FrontSide>
-                    <BackSide style={{padding:"0px"}}>
-                    <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                    <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
                                 c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
@@ -212,13 +219,13 @@ return <> <div className="d-none d-md-block">
                     flipOnClick={true} // default false
                     flipDirection="horizontal" // horizontal or vertical
                     >
-                    <FrontSide style={{padding:"0px"}}>
-                        <Image src={c.pic}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                        <Image src={c.pic}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
                         <p style={{margin:"20px 2px"}} className="body2 small">{c.name}</p>
 
                     </FrontSide>
-                    <BackSide style={{padding:"0px"}}>
-                    <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                    <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
                                 c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
@@ -245,13 +252,13 @@ return <> <div className="d-none d-md-block">
                     flipOnClick={true} // default false
                     flipDirection="horizontal" // horizontal or vertical
                     >
-                    <FrontSide style={{padding:"0px"}}>
-                        <Image src={c.pic}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                        <Image src={c.pic}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                         <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
 
                     </FrontSide>
-                    <BackSide style={{padding:"0px"}}>
-                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
                                 c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
@@ -273,12 +280,12 @@ return <> <div className="d-none d-md-block">
                     flipOnClick={true} // default false
                     flipDirection="horizontal" // horizontal or vertical
                     >
-                    <FrontSide style={{padding:"0px"}}>
-                        <Image src={c.pic}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                        <Image src={c.pic}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                         <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
                     </FrontSide>
-                    <BackSide style={{padding:"0px"}}>
-                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
                                 c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
@@ -300,12 +307,12 @@ return <> <div className="d-none d-md-block">
                     flipOnClick={true} // default false
                     flipDirection="horizontal" // horizontal or vertical
                     >
-                    <FrontSide style={{padding:"0px"}}>
-                        <Image src={c.pic}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                        <Image src={c.pic}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                         <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
                     </FrontSide>
-                    <BackSide style={{padding:"0px"}}>
-                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
+                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
                                 c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
