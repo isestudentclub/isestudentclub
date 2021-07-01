@@ -35,6 +35,13 @@ function App() {
      {/* <br/>
      <br/><br/>
      <br/> */}
+     <div className="text-center">
+     <br/><br/>
+     Made with <span style={{color: "#e25555"}}>&#9829;</span> by <a target="_blank" rel="noreferrer" href="https://github.com/ShreeCharan15">Shree Charan</a>
+     <br/><br/>
+
+     </div>
+
     </div>
   );
 }

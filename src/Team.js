@@ -59,10 +59,13 @@ export default Team
 
 const CC=()=>{
     const core=[
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
+        {name:"Aditya Kumar", pic:"/assets/team/aditya.jpg",role:"President",gif:"/assets/rickroll.gif",
+        socials:["https://open.spotify.com/playlist/4HjYoerAnBT2qXCNLY6GwH?si=843a3f65305f43b7",
+        "https://www.instagram.com/adityakumaaar/","https://www.linkedin.com/in/adityakumaaar/"]},
+        {name:"Syed Sajjad", pic:"/assets/team/sajjad.jpg",role:"Vice President",gif:"https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif",
+    socials:["https://open.spotify.com/playlist/1rDi7E6J0afEfjYckAZ5Vx?si=u7jw1OGJS-aLk6oKXY_4lA&utm_source=whatsapp&dl_branch=1","https://www.instagram.com/sajjad_wasti/","https://www.kaggle.com/sajjadwasti"]},
+        //{name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
+        //{name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
     ]
     return core.map((c,index)=>{
         index+=1
@@ -73,21 +76,22 @@ const CC=()=>{
             
             <Flippy
                     flipOnHover={true} // default false
-                    flipOnClick={true} // default false
+                    flipOnClick={false} // default false
                     flipDirection="horizontal" // horizontal or vertical
                     >
                     <FrontSide style={{padding:"0px"}}>
-                        <Image src={c.pic}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                        <Image src={c.pic}  bg="grey" width="200px" height="200px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/200"></Image>
                         <p style={{marginTop:"10px"}} className="body2 ">{c.name}</p>
-                        <p style={{marginTop:"10px"}} className="body lighttext">Role</p>
+                        <p style={{marginTop:"10px"}} className="body lighttext">{c.role}</p>
 
                     </FrontSide>
                     <BackSide style={{padding:"0px"}}>
-                    <Image src={"/assets/rickroll.gif"}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <Image src={c.gif}  bg="grey" width="200px" height="200px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/200"></Image>
                     <div className="row justify-content-center" style={{padding:"3px"}}>
-                            <SocialIcon  url={"https://www.youtube.com/channel/UCkzaJDHBKbcaNatH_T00ieg"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://open.spotify.com/playlist/42eLtt8RUBboyXLmNQWU5a?si=a00b06bc33eb4f74"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://github.com/ShreeCharan15"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                            {
+                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                )
+                            }
                         </div>
                     </BackSide>
                 </Flippy>        
@@ -97,23 +101,35 @@ const CC=()=>{
 
 const OC=()=>{
     const oc=[
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
+        {name:"Ananya Hebbar", pic:"/assets/team/ananya.jfif",socials:["https://www.linkedin.com/in/ananya-hebbar-5750211b4"]
+        ,gif:"https://i.pinimg.com/originals/2d/62/74/2d6274213eb306e8852347482da1310b.gif"},
+        {name:"Anushka Dongal", pic:"/assets/team/anushka.jpg",socials:[],gif:""},
+        {name:"Diya", pic:"/assets/team/diya.jpg",
+        socials:["https://open.spotify.com/playlist/474lIuqE8wIhXGCMX1NZVy?si=9dbf55f3d1a644d6","https://twitter.com/httpy2k","https://www.snapchat.com/add/minxxdia/"],
+        gif:"/assets/team/diyagif.gif"},
 
     ]
     const oc2=[
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
+        {name:"Isha Singhal", pic:"/assets/team/isha.jpg",socials:[],gif:""},
+        {name:"Manvith", pic:"/assets/team/manvith.jpg",socials:[],gif:""},
+        {name:"Peethi Hiremath", pic:"/assets/team/preethi.jpg",
+        socials:["https://open.spotify.com/playlist/1s4lUTpKfsJRrvr8bfEFpX?si=fPgPG-vbRUyQuYwScBz2wg&utm_source=native-share-menu&dl_branch=1",
+    "https://www.instagram.com/preethi_hiremath?r=nametag","https://www.linkedin.com/in/preethi-v-hiremath-a04a071b5"],
+        gif:"https://i.gifer.com/JgX.gif"},
+        {name:"Riya", pic:"/assets/team/riya.jpg",socials:[],gif:""},
+        {name:"Darshan", pic:"/assets/team/darshan.jpg",socials:[
+            "https://open.spotify.com/playlist/0a2nklg8hM1GMTS2IhcaA8?si=763c1246008a46b4"
+        ],gif:"https://media.giphy.com/media/NS7gPxeumewkWDOIxi/giphy.gif"},
 
     ]
     const oc3=[
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        {name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
+        {name:"Samartha", pic:"/assets/team/samartha.jpg",socials:[],gif:""},
+        {name:"Shree Charan", pic:"/assets/team/charan.jpg",socials:[
+            "https://open.spotify.com/playlist/3S1Qe7JLZvSRcNuT1KfKHt?si=9fa3a68f69024523","https://www.linkedin.com/in/shree-charan-32b1781b2/",
+            "https://github.com/ShreeCharan15"
+        ]
+        ,gif:"https://media.giphy.com/media/NCHhJ15B5Ai93NbDmz/giphy.gif"},
+        {name:"Vandit Agarwal", pic:"/assets/team/vandit.jpg",socials:[],gif:""},
     ]
 return <> <div className="d-none d-md-block">
     <div className="row justify-content-center">
@@ -135,11 +151,12 @@ return <> <div className="d-none d-md-block">
 
                     </FrontSide>
                     <BackSide style={{padding:"0px"}}>
-                        <Image src={"https://media.giphy.com/media/IbfW1ezQvWyonWLOhW/giphy.gif"}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                        <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
                         <div className="row justify-content-center">
-                            <SocialIcon  url={"https://www.youtube.com/channel/UCkzaJDHBKbcaNatH_T00ieg"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://open.spotify.com/playlist/42eLtt8RUBboyXLmNQWU5a?si=a00b06bc33eb4f74"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://github.com/ShreeCharan15"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                            {
+                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                )
+                            }
                         </div>
                     </BackSide>
                 </Flippy>
@@ -168,11 +185,12 @@ return <> <div className="d-none d-md-block">
 
                     </FrontSide>
                     <BackSide style={{padding:"0px"}}>
-                    <Image src={"https://media.giphy.com/media/IbfW1ezQvWyonWLOhW/giphy.gif"}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
                     <div className="row justify-content-center">
-                            <SocialIcon  url={"https://www.youtube.com/channel/UCkzaJDHBKbcaNatH_T00ieg"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://open.spotify.com/playlist/42eLtt8RUBboyXLmNQWU5a?si=a00b06bc33eb4f74"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://github.com/ShreeCharan15"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                            {
+                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                )
+                            }
                         </div>
                     </BackSide>
                 </Flippy>
@@ -184,7 +202,7 @@ return <> <div className="d-none d-md-block">
     <div className="row justify-content-center">
     <div className="col-0 col-md" ></div>
     {
-        oc.map((c,index)=>{
+        oc3.map((c,index)=>{
             index+=1
             let del=0.9
             return <motion.div  className="col-auto"  style={{margin:"10px 2px"}}
@@ -200,11 +218,12 @@ return <> <div className="d-none d-md-block">
 
                     </FrontSide>
                     <BackSide style={{padding:"0px"}}>
-                    <Image src={"https://media.giphy.com/media/IbfW1ezQvWyonWLOhW/giphy.gif"}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <Image src={c.gif}  bg="grey" width="130px" height="130px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
                     <div className="row justify-content-center">
-                            <SocialIcon  url={"https://www.youtube.com/channel/UCkzaJDHBKbcaNatH_T00ieg"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://open.spotify.com/playlist/42eLtt8RUBboyXLmNQWU5a?si=a00b06bc33eb4f74"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://github.com/ShreeCharan15"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                            {
+                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                )
+                            }
                         </div>
                     </BackSide>
                 </Flippy>
@@ -232,11 +251,12 @@ return <> <div className="d-none d-md-block">
 
                     </FrontSide>
                     <BackSide style={{padding:"0px"}}>
-                    <Image src={"https://media.giphy.com/media/IbfW1ezQvWyonWLOhW/giphy.gif"}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
                     <div className="row justify-content-center">
-                            <SocialIcon  url={"https://www.youtube.com/channel/UCkzaJDHBKbcaNatH_T00ieg"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://open.spotify.com/playlist/42eLtt8RUBboyXLmNQWU5a?si=a00b06bc33eb4f74"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://github.com/ShreeCharan15"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                            {
+                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                )
+                            }
                         </div>
                     </BackSide>
                 </Flippy>
@@ -258,11 +278,12 @@ return <> <div className="d-none d-md-block">
                         <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
                     </FrontSide>
                     <BackSide style={{padding:"0px"}}>
-                    <Image src={"https://media.giphy.com/media/IbfW1ezQvWyonWLOhW/giphy.gif"}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
                     <div className="row justify-content-center">
-                            <SocialIcon  url={"https://www.youtube.com/channel/UCkzaJDHBKbcaNatH_T00ieg"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://open.spotify.com/playlist/42eLtt8RUBboyXLmNQWU5a?si=a00b06bc33eb4f74"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://github.com/ShreeCharan15"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                            {
+                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                )
+                            }
                         </div>
                     </BackSide>
                 </Flippy>            
@@ -284,11 +305,12 @@ return <> <div className="d-none d-md-block">
                         <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
                     </FrontSide>
                     <BackSide style={{padding:"0px"}}>
-                    <Image src={"https://media.giphy.com/media/IbfW1ezQvWyonWLOhW/giphy.gif"}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
+                    <Image src={c.gif}  bg="grey" width="100px" height="100px" borderRadius="lg" fallbackSrc="https://via.placeholder.com/100"></Image>
                     <div className="row justify-content-center">
-                            <SocialIcon  url={"https://www.youtube.com/channel/UCkzaJDHBKbcaNatH_T00ieg"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://open.spotify.com/playlist/42eLtt8RUBboyXLmNQWU5a?si=a00b06bc33eb4f74"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                            <SocialIcon  url={"https://github.com/ShreeCharan15"} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                            {
+                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                )
+                            }
                         </div>
 
                     </BackSide>

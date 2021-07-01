@@ -1,6 +1,6 @@
 import teamImage from './images/team.svg'
-import valoImage from './images/valo.jfif'
-import { Box,Avatar, Center, useColorModeValue } from '@chakra-ui/react';
+//import valoImage from './images/valo.jfif'
+import { Box, Center, useColorModeValue } from '@chakra-ui/react';
 import AOS from 'aos'
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -32,13 +32,12 @@ const Home=()=>{
                     <div className="col">
                     <br/>
                     <p className="body medium">Meet the new team</p>
-                    <p className="body lighttext">Balha balaha blah blah</p>
-                    <p className="body lighttext small">By che2uch cnic</p>
+                    <p className="body lighttext small">Meet the new core and organizing committee of the ISE student club</p>
                     </div>
                 </Box>
               </Link>
             </div>
-            <div className="col-12 col-md-4" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100">
+            {/* <div className="col-12 col-md-4" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100">
               <Link  to="/blog" >
                 <Box className="row align-items-center"
                   bg={secondaryBack}
@@ -58,12 +57,12 @@ const Home=()=>{
                     </div>
                 </Box>
               </Link>
-            </div>
+            </div> */}
        
      </div>
 
       <br/><br/><br/><br/><br/>
-     <div className="row text-center justify-content-center" style={{minHeight:"80vh"}}>
+     {/* <div className="row text-center justify-content-center" style={{minHeight:"80vh"}}>
      <div className="col-12 col-md-4">
        <p data-aos="fade-up" 
         className="gothic medium">Upcoming events</p>
@@ -76,7 +75,7 @@ const Home=()=>{
          </div>
          
        </div>
-     </div>
+     </div> */}
   </div>
 }
 
