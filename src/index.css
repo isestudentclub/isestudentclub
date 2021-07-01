@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'gothic';
+  src: url('./Fonts/DelaGothicOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'valorant';
+  src: url('./Fonts/Valorant_Font.ttf');
+}
+
+@font-face {
+  font-family: 'merriweather';
+  src: url('./Fonts/Merriweather-Regular.ttf');
+}
+@font-face {
+  font-family: 'opensans';
+  src: url('./Fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'fauna';
+  src: url('./Fonts/FaunaOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'ruda';
+  src: url('./Fonts/Ruda-Regular.ttf');
+}
+@font-face {
+  font-family: 'raleway';
+  src: url('./Fonts/Raleway-Light.ttf');
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont,'opensans', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.lighttext{
+  color:#718096
+}
+
+
+.italic{
+  font-style: italic;
+}
+
+.bold{
+  font-weight: 600;
+}
+
+
+.dia{
+  background:linear-gradient(357deg, #C1DEE2  70%, #A0AEC0   30%);
+}
+
+.gothic{
+  font-family: 'gothic';
+  font-size: 2em;
+  letter-spacing:0.05em;
+}
+/*mobile*/
+.subheading{
+  font-family: 'raleway';
+  font-size: 1.6em;
+}
+
+.valorant{
+  font-family: 'valorant';
+  font-size: 1.6em;
+}
+.subheading2{
+  font-family: 'ruda';
+  font-size: 1.6em;
+}
+
+.heading{
+  font-family: 'merriweather';
+  font-size: 1.8em;
+}
+
+.body{
+  font-family: 'opensans';
+  font-size: 1em;
+}
+
+.body2{
+  font-family: 'fauna';
+  font-size: 1em;
+}
+
+
+.smallest{
+  font-size: 0.5em;
+}
+
+.small{
+  font-size: 0.6em;
+}
+
+.medium{
+  font-size: 1.2em;
+}
+
+.large{
+  font-size: 1.4em;
+}
+
+.larger{
+  font-size: 1.5em;
+}
+
+.largest{
+  font-size: 1.6em;
+}
+/*mobile*/
+
+
+
+
+.textCenterMobile{
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  
+  .subheading{
+  font-family: 'raleway';
+  font-size: 1.25em;
+}
+
+.valorant{
+  font-family: 'valorant';
+  font-size: 1.75em;
+}
+
+.gothic{
+  font-family: 'gothic';
+  font-size: 3em;
+  letter-spacing:0.05em;
+}
+.subheading2{
+  font-family: 'ruda';
+  font-size: 1.25em;
+}
+
+.heading{
+  font-family: 'merriweather';
+  font-size: 1.5em;
+}
+
+.body{
+  font-family: 'opensans';
+  font-size: 1.05em;
+}
+
+.body2{
+  font-family: 'fauna';
+  font-size: 1.05em;
+}
+
+.medium{
+  font-size: 1.25em;
+}
+.large{
+  font-size: 1.75em;
+}
+
+.larger{
+  font-size: 2em;
+}
+
+.largest{
+  font-size: 2.25em;
+}
+.normal{
+  font-size: 1.1em;
+}
+.smallest{
+  font-size: 0.5em;
+}
+
+.small{
+  font-size: 0.75em;
+}
+
+.textCenterMobile{
+  text-align: start;
+}
+
+.dia{
+  background:linear-gradient(275deg, #C1DEE2  58%, #A0AEC0   42%);
+}
+
+}
+
+
+
+
+
+
+/* scroll bar */
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #E2E8F0; 
+}
+::-webkit-scrollbar-thumb{
+  background:#A0AEC0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background:#A0AEC0;
+}
+/* scroll bar */
+
+
+
+
