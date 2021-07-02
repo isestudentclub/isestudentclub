@@ -1,6 +1,6 @@
 import teamImage from './images/team.svg'
 //import valoImage from './images/valo.jfif'
-import { Box, Center, useColorModeValue } from '@chakra-ui/react';
+import { Box,Avatar, Center, useColorModeValue } from '@chakra-ui/react';
 import AOS from 'aos'
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -32,32 +32,31 @@ const Home=()=>{
                     <div className="col">
                     <br/>
                     <p className="body medium">Meet the new team</p>
-                    <p className="body lighttext small">Meet the new core and organizing committee of the ISE student club</p>
+                    <p className="body lighttext small">Meet the new core and organizing committee of the ISE SC</p>
                     </div>
                 </Box>
               </Link>
             </div>
-            {/* <div className="col-12 col-md-4" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100">
-              <Link  to="/blog" >
+            <div className="col-12 col-md-4" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100">
+              <Link  to="/qnamuskan" >
                 <Box className="row align-items-center"
                   bg={secondaryBack}
                   _hover={{shadow:"sm",bg:secondaryBackHover}}
                   style={{border:"1px solid ",borderColor:borderColor,margin:"10px",padding:"20px 10px",borderRadius:"15px"}}>
                     <div className="col-12">
                       <Center>
-                      <Avatar size="xl" name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
+                      <Avatar size="xl" name="Segun Adebayo" src="/assets/team/muskan.jpeg" />
                       
                       </Center>
                     </div>
                     <div className="col">
                     <br/>
-                    <p className="body medium">An interview with uncinc ir nreun</p>
-                    <p className="body lighttext">Mett cueyc cir3yg8r irb b </p>
-                    <p className="body lighttext small">By che2uch cnic</p>
+                    <p className="body medium">Q & A with Muskan Agarwal</p>
+                    <p className="body lighttext small">A rendezvous with the past president of ISE SC.</p>
                     </div>
                 </Box>
               </Link>
-            </div> */}
+            </div>
        
      </div>
 

@@ -25,7 +25,7 @@ function App() {
      <Switch >
         {/* <Route exact path="/" component={()=><Home></Home>}></Route> */}
         <Route exact path="/" component={()=><Landing></Landing>}></Route>
-        <Route exact path="/blog" component={()=>withSuspense(<BlogPage></BlogPage>)}></Route>
+        <Route exact path="/qnamuskan" component={()=>withSuspense(<BlogPage></BlogPage>)}></Route>
         <Route exact path="/team" component={()=>withSuspense(<Team></Team>)}></Route>
         <Redirect to="/"></Redirect>
       </Switch>
