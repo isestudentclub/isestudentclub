@@ -64,10 +64,10 @@ const NavBar=()=>{
                 animate={{ x: "0px" }} className="col-auto">
                     <SocialIcon  url={"https://www.instagram.com/bmsce_ise_sc/"} target="_blank" style={{ height: 30, width: 30 }}/>
                 </motion.div>
-                <motion.div  whileHover={{scale: 1.2,transition: { duration: 0.3 },}} initial={{ x: "200px" }} 
+                {/* <motion.div  whileHover={{scale: 1.2,transition: { duration: 0.3 },}} initial={{ x: "200px" }} 
                 transition={{ duration: 0.5,delay:0.7,type:"spring"  }} animate={{ x: "0px" }} className="col-auto">
                     <SocialIcon  url={"https://discord.gg/XWG5XbMv"} target="_blank" style={{ height: 30, width: 30 }}/>
-                </motion.div>
+                </motion.div> */}
 
             </div>
         </div>

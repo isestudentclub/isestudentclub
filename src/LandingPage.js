@@ -27,12 +27,9 @@ const back=useColorModeValue("linear-gradient(to top,#f7fafc, #f4f8fb, #f2f6f9, 
                     </motion.p>
                     <motion.p className="subheading2 lighttext d-none d-md-block" style={{fontSize:"20px"}}
                     initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5,delay:0.9,type:"spring"}}>
-                         iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb
+                       A one-stop destination for all the ISE students. <br/>
+A haven for like-minded individuals to indulge themselves in various fun activities as well as voice their opinions on things ranging from college events to personal fads. Socialise and network with your peers through our interactive discord servers, and much more.
+<br/>Let's come together and grow as a community!
                     </motion.p>
                     <br/>
                     {/* <div className="row justify-content-center">
@@ -59,12 +56,9 @@ const back=useColorModeValue("linear-gradient(to top,#f7fafc, #f4f8fb, #f2f6f9, 
                     <a className="smallest lighttext" target="_blank" rel="noreferrer"  href="https://lottiefiles.com/user/212090">aource: @lottifiles/Nguyễn Như Lân</a>
                     <br/><br/><br/>
                     <p className="subheading2 lighttext d-md-none" style={{fontSize:"15px"}}>
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb g8er bger8 bger8 bge8r ber8 b
-                        iehbb 8gh 8e hg8eb 8e bg8erbh g8eb
+                    A one-stop destination for all the ISE students. <br/>
+A haven for like-minded individuals to indulge themselves in various fun activities as well as voice their opinions on things ranging from college events to personal fads. Socialise and network with your peers through our interactive discord servers, and much more.
+<br/>Let's come together and grow as a community!
                     </p>
                 </motion.div>
             </div>
