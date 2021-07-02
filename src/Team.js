@@ -110,7 +110,7 @@ const OC=()=>{
     "https://instagram.com/anushkaa_reddy?utm_medium=copy_link","https://www.linkedin.com/in/anushka-r-dongal-51b26b1ba"],
     gif:"/assets/team/anushkagif.gif"},
         
-    {name:"Darshan", pic:"/assets/team/darshan.jpg",socials:[
+    {name:"Darshan Hirani", pic:"/assets/team/darshan.jpg",socials:[
         "https://open.spotify.com/playlist/0a2nklg8hM1GMTS2IhcaA8?si=763c1246008a46b4","https://www.instagram.com/still.rainn/"
     ],gif:"https://media.giphy.com/media/NS7gPxeumewkWDOIxi/giphy.gif"},
     {name:"Diya", pic:"/assets/team/diya.jpg",
@@ -119,12 +119,16 @@ const OC=()=>{
     ]
     const oc2=[
         
-        {name:"Isha Singhal", pic:"/assets/team/isha.jpg",socials:[],gif:""},
+        {name:"Isha Singhal", pic:"/assets/team/isha.jpg",socials:[
+            "https://www.instagram.com/ishasinghal_/","https://www.linkedin.com/in/ishasinghal/",
+        ],gif:"https://media.giphy.com/media/3o7qDQ4kcSD1PLM3BK/giphy.gif"},
+
         {name:"Manvith", pic:"/assets/team/manvith.jpg",socials:[
             "https://www.instagram.com/_manvith_dalli_/"
         ]
         ,gif:"https://i.pinimg.com/originals/f3/3c/47/f33c47f18fa26c5ad7b301641eea4cfb.gif"},
-        {name:"Peethi Hiremath", pic:"/assets/team/preethi.jpg",
+
+        {name:"Peethi V Hiremath", pic:"/assets/team/preethi.jpg",
         socials:["https://open.spotify.com/playlist/1s4lUTpKfsJRrvr8bfEFpX?si=fPgPG-vbRUyQuYwScBz2wg&utm_source=native-share-menu&dl_branch=1",
     "https://www.instagram.com/preethi_hiremath?r=nametag","https://www.linkedin.com/in/preethi-v-hiremath-a04a071b5"],
         gif:"https://i.gifer.com/JgX.gif"},
@@ -137,7 +141,7 @@ const OC=()=>{
     ]
     const oc3=[
         
-        {name:"Riya", pic:"/assets/team/riya.jpg",socials:[],gif:""},
+        {name:"Riya Yadav", pic:"/assets/team/riya.jpg",socials:[],gif:""},
         {name:"Shree Charan", pic:"/assets/team/charan.jpg",socials:[
             "https://open.spotify.com/playlist/3S1Qe7JLZvSRcNuT1KfKHt?si=9fa3a68f69024523","https://www.linkedin.com/in/shree-charan-32b1781b2/",
             "https://github.com/ShreeCharan15"

@@ -55,20 +55,22 @@ code {
 }
 
 
-.dia{
-  background:linear-gradient(357deg, #C1DEE2  70%, #A0AEC0   30%);
-}
+
 
 .gothic{
   font-family: 'gothic';
   font-size: 2em;
   letter-spacing:0.05em;
 }
+
+
+
 /*mobile*/
 .subheading{
   font-family: 'raleway';
   font-size: 1.6em;
 }
+
 
 .valorant{
   font-family: 'valorant';
