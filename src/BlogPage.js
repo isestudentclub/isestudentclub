@@ -76,7 +76,7 @@ const Content=()=>{
             return <div style={{color:color}}>
                     <div className="row question" >
                         <div className="col-auto">
-                            <Avatar size="sm" name="Segun Adebayo" src={pic} />
+                            <Avatar size="sm" name={q.p} src={pic} />
                         </div>
                         <div className="col align-self-center bold">
                             {que}
@@ -85,7 +85,7 @@ const Content=()=>{
                     <br/>
                     <div className="row answer" >
                         <div className="col-auto">
-                            <Avatar size="sm" name="Segun Adebayo" src="/assets/team/muskan.jpeg" />
+                            <Avatar size="sm" name="Muskan" src="/assets/team/muskan.jpeg" />
                         </div>
                         <div className="col">
                             {q.ans[index]}
@@ -101,7 +101,7 @@ const Content=()=>{
         return <div style={{color:color}}>
                     <div className="row" >
                         <div className="col-auto">
-                            <Avatar size="sm" name="Segun Adebayo" src={pic} />
+                            <Avatar size="sm" name={q.p} src={pic} />
                         </div>
                         <div className="col align-self-center bold">
                             {q.que}
@@ -111,7 +111,7 @@ const Content=()=>{
                     <div className="row">
                         
                         <div className="col-auto">
-                            <Avatar size="sm" name="Segun Adebayo" src="/assets/team/muskan.jpeg" />
+                            <Avatar size="sm" name="Muskan" src="/assets/team/muskan.jpeg" />
                         </div>
                         <div className="col" >
                             {q.ans}
