@@ -6,7 +6,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, ColorModeScript, extendTheme } from "@chakra-ui/react"
 import {  HashRouter } from 'react-router-dom';
-
+import firebase from './firebase'
+firebase.analytics();
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider theme={extendTheme({
