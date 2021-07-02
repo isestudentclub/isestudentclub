@@ -3,6 +3,8 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion"
 import { Avatar,  useColorModeValue } from '@chakra-ui/react';
 import qna from './muskanqna.json'
+import shortid from "shortid";
+
 const BlogPage=()=>{
   
     const title="Q & A with Muskan Agarwal"
@@ -29,12 +31,12 @@ const BlogPage=()=>{
         </div>: <div className="body2  largest ">
         {title}
         </div>}
-        <p className="body lighttext">   - <a>Riya</a>, <a target="_blank" rel="noreferrer"  href="https://instagram.com/_manvith_dalli_?utm_medium=copy_link">Manvith</a></p>
+        <p className="body lighttext">   - <a href="https://www.instagram.com/riiya_06/" target="_blank" rel="noreferrer">Riya</a>, <a target="_blank" rel="noreferrer"  href="https://instagram.com/_manvith_dalli_?utm_medium=copy_link">Manvith</a></p>
         <br/>
         {headingType?null:<motion.div initial={{ y: "40px",opacity:0 }} transition={{ duration: 0.5 }}
         animate={{ y: "0px",opacity:1 }} className="row align-items-center">
         <div className="col-auto">
-            <Avatar size="xl" name="Segun Adebayo" src="/assets/team/muskan.jpeg" />
+            <Avatar size="xl" name="Muskan Agarwal" src="/assets/team/muskan.jpeg" />
         </div>
         <div className="col medium">
                <p className="body lighttext">ISE 2021</p>
@@ -73,7 +75,7 @@ const Content=()=>{
         let color=ind%2===0?col2:col
         if(Array.isArray(q.que))
         return<> {q.que.map((que,index)=>{
-            return <div style={{color:color}}>
+            return <div key={shortid.generate()} style={{color:color}}>
                     <div className="row question" >
                         <div className="col-auto">
                             <Avatar size="sm" name={q.p} src={pic} />
@@ -98,7 +100,7 @@ const Content=()=>{
         <br/>
         <br/>
         </>
-        return <div style={{color:color}}>
+        return <div key={shortid.generate()} style={{color:color}}>
                     <div className="row" >
                         <div className="col-auto">
                             <Avatar size="sm" name={q.p} src={pic} />

@@ -2,6 +2,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import {Image,  useColorModeValue } from '@chakra-ui/react';
 import { SocialIcon } from "react-social-icons"
+import shortid from "shortid";
 
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 const Team=()=>{
@@ -71,7 +72,7 @@ const CC=()=>{
     return core.map((c,index)=>{
         index+=1
         let del=0.2
-        return <motion.div style={{margin:"10px"}} className="col-auto"  
+        return <motion.div key={shortid.generate()} style={{margin:"10px"}} className="col-auto"  
         initial={{opacity:0,y:"100px",}} animate={{y:"0px",opacity:1,}} 
         transition={{duration:0.5,delay:del+(index*0.1)}}>
             
@@ -90,7 +91,7 @@ const CC=()=>{
                     <Image src={c.gif}  bg="grey" width="200px" height="200px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/150/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center" style={{padding:"3px"}}>
                             {
-                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
                                 )
                             }
                         </div>
@@ -141,7 +142,9 @@ const OC=()=>{
     ]
     const oc3=[
         
-        {name:"Riya Yadav", pic:"/assets/team/riya.jpg",socials:[],gif:""},
+        {name:"Riya Yadav", pic:"/assets/team/riya.jpg",socials:[
+            "https://open.spotify.com/playlist/3Xov4soblLZhZWAnKxxAWw?si=17e947a643bf4732","https://www.instagram.com/riiya_06/"
+        ],gif:"https://media.giphy.com/media/goQ4bc8X0Lh6w/giphy.gif"},
         {name:"Shree Charan", pic:"/assets/team/charan.jpg",socials:[
             "https://open.spotify.com/playlist/3S1Qe7JLZvSRcNuT1KfKHt?si=9fa3a68f69024523","https://www.linkedin.com/in/shree-charan-32b1781b2/",
             "https://github.com/ShreeCharan15"
@@ -159,7 +162,7 @@ return <> <div className="d-none d-md-block">
             oc.map((c,index)=>{
                 index+=1
                 let del=0.5
-                return <motion.div  className="col-auto"  style={{margin:"10px 2px"}}
+                return <motion.div key={shortid.generate()}  className="col-auto"  style={{margin:"10px 2px"}}
                 initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
                     <Flippy
                     style={{boxShadow:" 0 0px 0px 0 yellow"}}
@@ -179,7 +182,7 @@ return <> <div className="d-none d-md-block">
                         fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
                         <div className="row justify-content-center">
                             {
-                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
                                 )
                             }
                         </div>
@@ -197,7 +200,7 @@ return <> <div className="d-none d-md-block">
             oc2.map((c,index)=>{
                 index+=1
                 let del=0.7
-                return <motion.div  className="col-auto"  style={{margin:"10px 0px"}}
+                return <motion.div key={shortid.generate()} className="col-auto"  style={{margin:"10px 0px"}}
                 initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
                     <Flippy
                     flipOnHover={true} // default false
@@ -213,7 +216,7 @@ return <> <div className="d-none d-md-block">
                     <Image src={c.gif}  bg="grey" width="150px" height="150px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
-                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
                                 )
                             }
                         </div>
@@ -230,7 +233,7 @@ return <> <div className="d-none d-md-block">
         oc3.map((c,index)=>{
             index+=1
             let del=0.9
-            return <motion.div  className="col-auto"  style={{margin:"10px 2px"}}
+            return <motion.div key={shortid.generate()} className="col-auto"  style={{margin:"10px 2px"}}
             initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
                 <Flippy
                     flipOnHover={true} // default false
@@ -246,7 +249,7 @@ return <> <div className="d-none d-md-block">
                     <Image src={c.gif}  bg="grey" width="150px" height="150px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
-                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
                                 )
                             }
                         </div>
@@ -263,7 +266,7 @@ return <> <div className="d-none d-md-block">
         oc.map((c,index)=>{
             index+=1
             let del=0.5
-            return <motion.div  className="col-6"  style={{margin:"10px 0px"}}
+            return <motion.div key={shortid.generate()} className="col-6"  style={{margin:"10px 0px"}}
             initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
                 <Flippy
                     flipOnHover={true} // default false
@@ -279,7 +282,7 @@ return <> <div className="d-none d-md-block">
                     <Image src={c.gif}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
-                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
                                 )
                             }
                         </div>
@@ -291,7 +294,7 @@ return <> <div className="d-none d-md-block">
         oc2.map((c,index)=>{
             index+=1
             let del=0.7
-            return <motion.div  className="col-6"  style={{margin:"10px 0px"}}
+            return <motion.div key={shortid.generate()} className="col-6"  style={{margin:"10px 0px"}}
             initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
                 <Flippy
                     flipOnHover={true} // default false
@@ -306,7 +309,7 @@ return <> <div className="d-none d-md-block">
                     <Image src={c.gif}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
-                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
                                 )
                             }
                         </div>
@@ -318,7 +321,7 @@ return <> <div className="d-none d-md-block">
         oc3.map((c,index)=>{
             index+=1
             let del=0.9
-            return <motion.div  className="col-6"  style={{margin:"10px 0px"}}
+            return <motion.div key={shortid.generate()} className="col-6"  style={{margin:"10px 0px"}}
             initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
                 <Flippy
                     flipOnHover={true} // default false
@@ -333,7 +336,7 @@ return <> <div className="d-none d-md-block">
                     <Image src={c.gif}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
                     <div className="row justify-content-center">
                             {
-                                c.socials.map(sc=><SocialIcon  url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
+                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
                                 )
                             }
                         </div>

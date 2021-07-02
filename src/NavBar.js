@@ -42,11 +42,14 @@ const NavBar=()=>{
                         </motion.div>
                         
                 </div>
+                
                 <div className="col-auto d-md-none">
                     <motion.div  initial={{ y: "-100px" }} transition={{ duration: 0.5 }} animate={{ y: "0px" }}>
                         <div className="row align-items-center" >
                             <div className="col-auto">
+                            <Link to="/">
                             <img src={iselogo} alt="logo" style={{maxHeight:"40px"}}></img>
+                            </Link>
                             </div>
                         </div>
                     </motion.div>
