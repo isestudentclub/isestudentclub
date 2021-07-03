@@ -1,12 +1,14 @@
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion"
 import { Avatar,  useColorModeValue } from '@chakra-ui/react';
 import qna from './muskanqna.json'
 import shortid from "shortid";
-
+import firebase from './firebase'
 const BlogPage=()=>{
-  
+    useEffect(()=>{
+        firebase.analytics().logEvent("qna");
+    },[]);
     const title="Q & A with Muskan Agarwal"
     
     const [headingType,setHeadingType]=useState(true);

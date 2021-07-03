@@ -1,11 +1,14 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import {Image,  useColorModeValue } from '@chakra-ui/react';
 import { SocialIcon } from "react-social-icons"
 import shortid from "shortid";
-
+import firebase from './firebase'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 const Team=()=>{
+    useEffect(()=>{
+        firebase.analytics().logEvent("teamview");
+    },[]);
     const [oc,setOc]=useState(false)
     const gradient=useColorModeValue("linear-gradient(to bottom, #cbd5e0, #d5dee7, #e0e8ee, #ebf1f5, #f7fafc)",
     "linear-gradient(to top, #1a202c, #151c29, #101826, #0b1324, #040d21)")
