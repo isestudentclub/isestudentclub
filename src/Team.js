@@ -7,7 +7,7 @@ import firebase from './firebase'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 const Team=()=>{
     useEffect(()=>{
-        //firebase.analytics().logEvent("teamview");
+        firebase.analytics().logEvent("teamview");
     },[]);
     const bg=useColorModeValue("#F6F6F6","#1A202C")
 

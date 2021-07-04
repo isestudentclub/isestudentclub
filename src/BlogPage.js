@@ -7,7 +7,7 @@ import shortid from "shortid";
 import firebase from './firebase'
 const BlogPage=()=>{
     useEffect(()=>{
-       // firebase.analytics().logEvent("qna");
+        firebase.analytics().logEvent("qna");
     },[]);
     const title="Q & A with Muskan Agarwal"
     
