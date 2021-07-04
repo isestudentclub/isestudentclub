@@ -2,7 +2,6 @@ import { Box, IconButton, useColorMode, useColorModeValue } from "@chakra-ui/rea
 import { motion } from "framer-motion"
 import { SocialIcon } from "react-social-icons"
 import { MoonIcon, SunIcon } from "@chakra-ui/icons"
-import iselogo from './images/iselogo.png'
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom";
 
@@ -34,7 +33,7 @@ const NavBar=()=>{
                             <Link to="/">
                             <div className="row align-items-center gothic" style={{fontSize:"15px"}} >
                                 <motion.div  whileHover={{scale: 1.2,transition: { duration: 0.3 },}} className="col-auto">
-                                <img src={iselogo} alt="logo" style={{maxHeight:"40px"}}></img>
+                                <img src={"./assets/iselogo.png"} alt="logo" style={{maxHeight:"40px"}}></img>
                                 </motion.div>
                                 ISE STUDENT CLUB
                             </div>
@@ -48,7 +47,7 @@ const NavBar=()=>{
                         <div className="row align-items-center" >
                             <div className="col-auto">
                             <Link to="/">
-                            <img src={iselogo} alt="logo" style={{maxHeight:"40px"}}></img>
+                            <img src={"./assets/iselogo.png"} alt="logo" style={{maxHeight:"40px"}}></img>
                             </Link>
                             </div>
                         </div>

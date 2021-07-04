@@ -1,5 +1,4 @@
-import { Center, Stack } from "@chakra-ui/react"
-import { Player } from '@lottiefiles/react-lottie-player';
+import { Center, Stack,Spinner } from "@chakra-ui/react"
 
 const Loading=()=>{
     return <div className="container" style={{height:"100vh"}}>
@@ -8,14 +7,10 @@ const Loading=()=>{
      </div>
         <Center height="100%">
             <Stack >
-                <Player
-                    autoplay
-                    loop
-                    src={"/assets/loading.json"}
-                    style={{ height: '150px',width:"150px" }}
-                >
-                </Player>
-            
+            <Center>
+            <Spinner size="xl" />
+            </Center>
+            <br/>
                 <p className="small text-center gothic">Dividing by zero</p>
              </Stack>
         </Center>

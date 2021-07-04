@@ -1,5 +1,3 @@
-import teamImage from './images/team.svg'
-//import valoImage from './images/valo.jfif'
 import { Box,Avatar, Center, useColorModeValue } from '@chakra-ui/react';
 import AOS from 'aos'
 import { Link } from "react-router-dom";
@@ -26,7 +24,7 @@ const Home=()=>{
                   style={{border:"1px solid ",borderColor:borderColor,margin:"10px",padding:"20px 10px",borderRadius:"15px"}}>
                     <div className="col-12 ">
                       <Center>
-                      <img alt="team" src={teamImage} style={{maxHeight:"100px"}}></img>
+                      <img alt="team" src={"./assets/team.svg"} style={{maxHeight:"100px"}}></img>
                       </Center>
                     </div>
                     <div className="col">
@@ -53,6 +51,26 @@ const Home=()=>{
                     <br/>
                     <p className="body medium">Q & A with Muskan Agarwal</p>
                     <p className="body lighttext small">A rendezvous with the past president of ISE SC.</p>
+                    </div>
+                </Box>
+              </Link>
+            </div>
+            <div className="col-12 col-md-4" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100">
+              <Link  to="/chatwithyash" >
+                <Box className="row align-items-center"
+                  bg={secondaryBack}
+                  _hover={{shadow:"sm",bg:secondaryBackHover}}
+                  style={{border:"1px solid ",borderColor:borderColor,margin:"10px",padding:"20px 10px",borderRadius:"15px"}}>
+                    <div className="col-12">
+                      <Center>
+                      <Avatar size="xl" name="Yash" src="/assets/team/yash.jpg" />
+                      
+                      </Center>
+                    </div>
+                    <div className="col">
+                    <br/>
+                    <p className="body medium">A chat with Yash Kamal</p>
+                    <p className="body lighttext small">A rendezvous with the past vice president of ISE SC.</p>
                     </div>
                 </Box>
               </Link>

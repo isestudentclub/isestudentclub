@@ -7,7 +7,7 @@ import shortid from "shortid";
 import firebase from './firebase'
 const BlogPage=()=>{
     useEffect(()=>{
-        firebase.analytics().logEvent("qna");
+       // firebase.analytics().logEvent("qna");
     },[]);
     const title="Q & A with Muskan Agarwal"
     
@@ -33,6 +33,7 @@ const BlogPage=()=>{
         </div>: <div className="body2  largest ">
         {title}
         </div>}
+        <p className="body lighttext" style={{paddingLeft:"10px"}}>2nd Jul 21</p>
         <p className="body lighttext">   - <a href="https://www.instagram.com/riiya_06/" target="_blank" rel="noreferrer">Riya</a>, <a target="_blank" rel="noreferrer"  href="https://instagram.com/_manvith_dalli_?utm_medium=copy_link">Manvith</a></p>
         <br/>
         {headingType?null:<motion.div initial={{ y: "40px",opacity:0 }} transition={{ duration: 0.5 }}
@@ -75,8 +76,20 @@ const Content=()=>{
     qna.map((q,ind)=>{
         let pic="/assets/team/"+q.p+".jpg"
         let color=ind%2===0?col2:col
+        let ques=[]
+        let ans=[]
         if(Array.isArray(q.que))
-        return<> {q.que.map((que,index)=>{
+            {
+                ques=[...q.que]
+                ans=[...q.ans]
+            }
+        else
+        {
+            ques=[q.que]
+            ans=[q.ans]
+        }
+
+        return<> {ques.map((que,index)=>{
             return <div key={shortid.generate()} style={{color:color}}>
                     <div className="row question" >
                         <div className="col-auto">
@@ -92,7 +105,7 @@ const Content=()=>{
                             <Avatar size="sm" name="Muskan" src="/assets/team/muskan.jpeg" />
                         </div>
                         <div className="col">
-                            {q.ans[index]}
+                            {ans[index]}
                         </div>
                     </div>
                     <br/>
@@ -102,29 +115,7 @@ const Content=()=>{
         <br/>
         <br/>
         </>
-        return <div key={shortid.generate()} style={{color:color}}>
-                    <div className="row" >
-                        <div className="col-auto">
-                            <Avatar size="sm" name={q.p} src={pic} />
-                        </div>
-                        <div className="col align-self-center bold">
-                            {q.que}
-                        </div>
-                    </div>
-                    <br/>
-                    <div className="row">
-                        
-                        <div className="col-auto">
-                            <Avatar size="sm" name="Muskan" src="/assets/team/muskan.jpeg" />
-                        </div>
-                        <div className="col" >
-                            {q.ans}
-                        </div>
-                    </div>
-                    <br/>
-                    <br/>
-                    <br/>
-        </div>
+        
     })
 }
 

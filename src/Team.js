@@ -7,8 +7,10 @@ import firebase from './firebase'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 const Team=()=>{
     useEffect(()=>{
-        firebase.analytics().logEvent("teamview");
+        //firebase.analytics().logEvent("teamview");
     },[]);
+    const bg=useColorModeValue("#F6F6F6","#1A202C")
+
     const [oc,setOc]=useState(false)
     const gradient=useColorModeValue("linear-gradient(to bottom, #cbd5e0, #d5dee7, #e0e8ee, #ebf1f5, #f7fafc)",
     "linear-gradient(to top, #1a202c, #151c29, #101826, #0b1324, #040d21)")
@@ -47,7 +49,7 @@ const Team=()=>{
                    <div className="col-12 col-md-10 align-self-md-center text-center" >
                        <div className="row  justify-content-center" >
                           {
-                              oc? <OC></OC>:<CC></CC>
+                              oc? <OC bg={bg}></OC>:<CC bg={bg}></CC>
                           }
                        </div>
                    </div>
@@ -60,8 +62,7 @@ export default Team
 
 
 
-const CC=()=>{
-    const bg=useColorModeValue("#F6F6F6","#1A202C")
+const CC=({bg})=>{
 
     const core=[
         {name:"Aditya Kumar", pic:"/assets/team/aditya.jpg",role:"President",gif:"/assets/rickroll.gif",
@@ -69,8 +70,6 @@ const CC=()=>{
         "https://www.instagram.com/adityakumaaar/","https://www.linkedin.com/in/adityakumaaar/"]},
         {name:"Syed Sajjad", pic:"/assets/team/sajjad.jpg",role:"Vice President",gif:"https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif",
     socials:["https://open.spotify.com/playlist/1rDi7E6J0afEfjYckAZ5Vx?si=u7jw1OGJS-aLk6oKXY_4lA&utm_source=whatsapp&dl_branch=1","https://www.instagram.com/sajjad_wasti/","https://www.kaggle.com/sajjadwasti"]},
-        //{name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
-        //{name:"Segun Adebayo", pic:"https://bit.ly/sage-adebayo"},
     ]
     return core.map((c,index)=>{
         index+=1
@@ -104,8 +103,7 @@ const CC=()=>{
     })
 }
 
-const OC=()=>{
-    const bg=useColorModeValue("#F6F6F6","#1A202C")
+const OC=({bg})=>{
 
     const oc=[
         {name:"Ananya Hebbar", pic:"/assets/team/ananya.jfif",socials:["https://www.linkedin.com/in/ananya-hebbar-5750211b4"]
@@ -120,9 +118,7 @@ const OC=()=>{
     {name:"Diya", pic:"/assets/team/diya.jpg",
         socials:["https://open.spotify.com/playlist/474lIuqE8wIhXGCMX1NZVy?si=9dbf55f3d1a644d6","https://twitter.com/httpy2k","https://www.snapchat.com/add/minxxdia/"],
         gif:"/assets/team/diyagif.gif"},
-    ]
-    const oc2=[
-        
+          
         {name:"Isha Singhal", pic:"/assets/team/isha.jpg",socials:[
             "https://www.instagram.com/ishasinghal_/","https://www.linkedin.com/in/ishasinghal/",
         ],gif:"https://media.giphy.com/media/3o7qDQ4kcSD1PLM3BK/giphy.gif"},
@@ -132,7 +128,7 @@ const OC=()=>{
         ]
         ,gif:"https://i.pinimg.com/originals/f3/3c/47/f33c47f18fa26c5ad7b301641eea4cfb.gif"},
 
-        {name:"Peethi V Hiremath", pic:"/assets/team/preethi.jpg",
+        {name:"Preethi V Hiremath", pic:"/assets/team/preethi.jpg",
         socials:["https://open.spotify.com/playlist/1s4lUTpKfsJRrvr8bfEFpX?si=fPgPG-vbRUyQuYwScBz2wg&utm_source=native-share-menu&dl_branch=1",
     "https://www.instagram.com/preethi_hiremath?r=nametag","https://www.linkedin.com/in/preethi-v-hiremath-a04a071b5"],
         gif:"https://i.gifer.com/JgX.gif"},
@@ -141,10 +137,6 @@ const OC=()=>{
             "https://www.linkedin.com/in/samartha-s-6b9b16197/"
         ],
         gif:"https://media.giphy.com/media/gLLGj2bYYm2mm6nwVT/giphy.gif"},
-
-    ]
-    const oc3=[
-        
         {name:"Riya Yadav", pic:"/assets/team/riya.jpg",socials:[
             "https://open.spotify.com/playlist/3Xov4soblLZhZWAnKxxAWw?si=17e947a643bf4732","https://www.instagram.com/riiya_06/"
         ],gif:"https://media.giphy.com/media/goQ4bc8X0Lh6w/giphy.gif"},
@@ -158,9 +150,8 @@ const OC=()=>{
         ],
         gif:"https://c.tenor.com/bnUoT7HrcZ4AAAAi/cool-smart.gif"},
     ]
-return <> <div className="d-none d-md-block">
+return <> <div className="">
     <div className="row justify-content-center">
-        <div className="col-0 col-md" ></div>
         {
             oc.map((c,index)=>{
                 index+=1
@@ -195,163 +186,10 @@ return <> <div className="d-none d-md-block">
             </motion.div>
             })
         }
-        <div className="col-0 col-md" ></div>
     </div>
-    <div className="row justify-content-center">
-        <div className="col-0 col-md" ></div>
-        {
-            oc2.map((c,index)=>{
-                index+=1
-                let del=0.7
-                return <motion.div key={shortid.generate()} className="col-auto"  style={{margin:"10px 0px"}}
-                initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
-                    <Flippy
-                    flipOnHover={true} // default false
-                    flipOnClick={true} // default false
-                    flipDirection="horizontal" // horizontal or vertical
-                    >
-                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                        <Image src={c.pic}  bg="grey" width="150px" height="150px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
-                        <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
-
-                    </FrontSide>
-                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                    <Image src={c.gif}  bg="grey" width="150px" height="150px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
-                    <div className="row justify-content-center">
-                            {
-                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                                )
-                            }
-                        </div>
-                    </BackSide>
-                </Flippy>
-            </motion.div>
-            })
-        }
-        <div className="col-0 col-md" ></div>
-    </div>
-    <div className="row justify-content-center">
-    <div className="col-0 col-md" ></div>
-    {
-        oc3.map((c,index)=>{
-            index+=1
-            let del=0.9
-            return <motion.div key={shortid.generate()} className="col-auto"  style={{margin:"10px 2px"}}
-            initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
-                <Flippy
-                    flipOnHover={true} // default false
-                    flipOnClick={true} // default false
-                    flipDirection="horizontal" // horizontal or vertical
-                    >
-                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                        <Image src={c.pic}  bg="grey" width="150px" height="150px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
-                        <p style={{margin:"20px 2px"}} className="body2 small">{c.name}</p>
-
-                    </FrontSide>
-                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                    <Image src={c.gif}  bg="grey" width="150px" height="150px" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/130/"+(bg.substring(1))}></Image>
-                    <div className="row justify-content-center">
-                            {
-                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                                )
-                            }
-                        </div>
-                    </BackSide>
-                </Flippy>
-        </motion.div>
-        })
-    }
-    <div className="col-0 col-md" ></div>
-</div>
-</div> 
-<div className="d-md-none row justify-content-center">
-{
-        oc.map((c,index)=>{
-            index+=1
-            let del=0.5
-            return <motion.div key={shortid.generate()} className="col-6"  style={{margin:"10px 0px"}}
-            initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
-                <Flippy
-                    flipOnHover={true} // default false
-                    flipOnClick={true} // default false
-                    flipDirection="horizontal" // horizontal or vertical
-                    >
-                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                        <Image src={c.pic}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
-                        <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
-
-                    </FrontSide>
-                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                    <Image src={c.gif}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
-                    <div className="row justify-content-center">
-                            {
-                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                                )
-                            }
-                        </div>
-                    </BackSide>
-                </Flippy>
-        </motion.div>
-        })
-    } {
-        oc2.map((c,index)=>{
-            index+=1
-            let del=0.7
-            return <motion.div key={shortid.generate()} className="col-6"  style={{margin:"10px 0px"}}
-            initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
-                <Flippy
-                    flipOnHover={true} // default false
-                    flipOnClick={true} // default false
-                    flipDirection="horizontal" // horizontal or vertical
-                    >
-                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                        <Image src={c.pic}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
-                        <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
-                    </FrontSide>
-                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                    <Image src={c.gif}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
-                    <div className="row justify-content-center">
-                            {
-                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                                )
-                            }
-                        </div>
-                    </BackSide>
-                </Flippy>            
-        </motion.div>
-        })
-    } {
-        oc3.map((c,index)=>{
-            index+=1
-            let del=0.9
-            return <motion.div key={shortid.generate()} className="col-6"  style={{margin:"10px 0px"}}
-            initial={{opacity:0,y:"100px"}} animate={{opacity:1,y:"0px"}} transition={{duration:0.3,delay:del+(index*0.05)}}>
-                <Flippy
-                    flipOnHover={true} // default false
-                    flipOnClick={true} // default false
-                    flipDirection="horizontal" // horizontal or vertical
-                    >
-                    <FrontSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                        <Image src={c.pic}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
-                        <p style={{margin:"20px 0px"}} className="body2 small">{c.name}</p>
-                    </FrontSide>
-                    <BackSide style={{padding:"0px",boxShadow:" 0 0px 0px 0 yellow"}}>
-                    <Image src={c.gif}  bg="grey" width="100%" height="100%" borderRadius="lg" fallbackSrc={"https://via.placeholder.com/100/"+(bg.substring(1))}></Image>
-                    <div className="row justify-content-center">
-                            {
-                                c.socials.map(sc=><SocialIcon key={shortid.generate()} url={sc} target="_blank" style={{ height: 25, width: 25,margin:"3px" }}/>
-                                )
-                            }
-                        </div>
-
-                    </BackSide>
-                </Flippy>
-            
-        </motion.div>
-        })
-    }
     
-</div>
+</div> 
+
 </>
 }
 

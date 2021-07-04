@@ -28,21 +28,10 @@ const back=useColorModeValue("linear-gradient(to top,#f7fafc, #f4f8fb, #f2f6f9, 
                     <motion.p className="subheading2 lighttext d-none d-md-block" style={{fontSize:"20px"}}
                     initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5,delay:0.9,type:"spring"}}>
                        A one-stop destination for all the ISE students. <br/>
-A haven for like-minded individuals to indulge themselves in various fun activities as well as voice their opinions on things ranging from college events to personal fads. Socialise and network with your peers through our interactive discord servers, and much more.
-<br/>Let's come together and grow as a community!
+                        A haven for like-minded individuals to indulge themselves in various fun activities as well as voice their opinions on things ranging from college events to personal fads. Socialise and network with your peers through our interactive discord servers, and much more.
+                        <br/>Let's come together and grow as a community!
                     </motion.p>
                     <br/>
-                    {/* <div className="row justify-content-center">
-                        <motion.div whileHover={{scale: 1.2,transition: { duration: 0.3 },}}  
-                        initial={{ y: "200px",opacity:0 }} transition={{ duration: 0.5,delay:0.6,type:"spring"  }} 
-                        animate={{ y: "0px",opacity:1 }} className="col-auto">
-                            <SocialIcon  url={"https://www.instagram.com/bmsce_ise_sc/"} target="_blank" style={{ height: 50, width: 50 }}/>
-                        </motion.div>
-                        <motion.div  whileHover={{scale: 1.2,transition: { duration: 0.3 },}} initial={{ y: "200px",opacity:0 }} 
-                            transition={{ duration: 0.5,delay:0.7,type:"spring"  }} animate={{ y: "0px",opacity:1 }} className="col-auto">
-                            <SocialIcon  url={"https://discord.gg/XWG5XbMv"} target="_blank" style={{ height: 50, width: 50 }}/>
-                        </motion.div>
-                    </div> */}
                 </div>
                 <motion.div className="col-12 col-md-6 align-self-md-center align-self-start" 
                 initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.5,delay:0.9,type:"spring"}}>

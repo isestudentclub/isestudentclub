@@ -71,7 +71,9 @@ code {
   font-size: 1.6em;
 }
 
-
+.padd{
+  padding: 5px 10px;
+}
 .valorant{
   font-family: 'valorant';
   font-size: 1.6em;
@@ -177,6 +179,10 @@ code {
 
 .larger{
   font-size: 2em;
+}
+
+.padd{
+  padding: 5px 50px;
 }
 
 .largest{
