@@ -5,6 +5,7 @@ import { Avatar,  useColorModeValue } from '@chakra-ui/react';
 import firebase from './firebase'
 const Yash=()=>{
     useEffect(()=>{
+        if(window.location.hostname!=='localhost')
         firebase.analytics().logEvent("yash");
     },[]);
     const title="A chat with Yash Kamal"

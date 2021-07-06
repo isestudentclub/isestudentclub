@@ -7,6 +7,7 @@ import shortid from "shortid";
 import firebase from './firebase'
 const BlogPage=()=>{
     useEffect(()=>{
+        if(window.location.hostname!=='localhost')
         firebase.analytics().logEvent("qna");
     },[]);
     const title="Q & A with Muskan Agarwal"

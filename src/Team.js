@@ -7,6 +7,7 @@ import firebase from './firebase'
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
 const Team=()=>{
     useEffect(()=>{
+        if(window.location.hostname!=='localhost')
         firebase.analytics().logEvent("teamview");
     },[]);
     const bg=useColorModeValue("#F6F6F6","#1A202C")
@@ -65,10 +66,10 @@ export default Team
 const CC=({bg})=>{
 
     const core=[
-        {name:"Aditya Kumar", pic:"/assets/team/aditya.jpg",role:"President",gif:"/assets/rickroll.gif",
+        {name:"Aditya Kumar", pic:"/assets/team/aditya.jpg",role:"President",gif:"/assets/team/aditya.gif",
         socials:["https://open.spotify.com/playlist/4HjYoerAnBT2qXCNLY6GwH?si=843a3f65305f43b7",
         "https://www.instagram.com/adityakumaaar/","https://www.linkedin.com/in/adityakumaaar/"]},
-        {name:"Syed Sajjad", pic:"/assets/team/sajjad.jpg",role:"Vice President",gif:"https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif",
+        {name:"Syed Sajjad", pic:"/assets/team/sajjad.jpg",role:"Vice President",gif:"/assets/team/sajjad.gif",
     socials:["https://open.spotify.com/playlist/1rDi7E6J0afEfjYckAZ5Vx?si=u7jw1OGJS-aLk6oKXY_4lA&utm_source=whatsapp&dl_branch=1","https://www.instagram.com/sajjad_wasti/","https://www.kaggle.com/sajjadwasti"]},
     ]
     return core.map((c,index)=>{
@@ -107,21 +108,21 @@ const OC=({bg})=>{
 
     const oc=[
         {name:"Ananya Hebbar", pic:"/assets/team/ananya.jfif",socials:["https://www.linkedin.com/in/ananya-hebbar-5750211b4"]
-        ,gif:"https://i.pinimg.com/originals/2d/62/74/2d6274213eb306e8852347482da1310b.gif"},
+        ,gif:"/assets/team/ananya.gif"},
         {name:"Anushka R Dongal", pic:"/assets/team/anushka.jfif",socials:["https://open.spotify.com/playlist/1pgfWf233BvNs15ElMNNDJ?si=4ooTgkUQTxmVOr9-kX3LVw&utm_source=copy-link&dl_branch=1",
     "https://instagram.com/anushkaa_reddy?utm_medium=copy_link","https://www.linkedin.com/in/anushka-r-dongal-51b26b1ba"],
-    gif:"/assets/team/anushkagif.gif"},
+    gif:"/assets/team/anushka.gif"},
         
     {name:"Darshan Hirani", pic:"/assets/team/darshan.jpg",socials:[
         "https://open.spotify.com/playlist/0a2nklg8hM1GMTS2IhcaA8?si=763c1246008a46b4","https://www.instagram.com/still.rainn/"
-    ],gif:"https://media.giphy.com/media/NS7gPxeumewkWDOIxi/giphy.gif"},
+    ],gif:"/assets/team/darshan.gif"},
     {name:"Diya", pic:"/assets/team/diya.jpg",
         socials:["https://open.spotify.com/playlist/474lIuqE8wIhXGCMX1NZVy?si=9dbf55f3d1a644d6","https://twitter.com/httpy2k","https://www.snapchat.com/add/minxxdia/"],
-        gif:"/assets/team/diyagif.gif"},
+        gif:"/assets/team/diya.gif"},
           
         {name:"Isha Singhal", pic:"/assets/team/isha.jpg",socials:[
             "https://www.instagram.com/ishasinghal_/","https://www.linkedin.com/in/ishasinghal/",
-        ],gif:"https://media.giphy.com/media/3o7qDQ4kcSD1PLM3BK/giphy.gif"},
+        ],gif:"/assets/team/isha.gif"},
 
         {name:"Manvith", pic:"/assets/team/manvith.jpg",socials:[
             "https://www.instagram.com/_manvith_dalli_/"
@@ -131,20 +132,20 @@ const OC=({bg})=>{
         {name:"Preethi V Hiremath", pic:"/assets/team/preethi.jpg",
         socials:["https://open.spotify.com/playlist/1s4lUTpKfsJRrvr8bfEFpX?si=fPgPG-vbRUyQuYwScBz2wg&utm_source=native-share-menu&dl_branch=1",
     "https://www.instagram.com/preethi_hiremath?r=nametag","https://www.linkedin.com/in/preethi-v-hiremath-a04a071b5"],
-        gif:"https://i.gifer.com/JgX.gif"},
+        gif:"/assets/team/preethi.gif"},
         
         {name:"Samartha", pic:"/assets/team/samartha.jpg",socials:[
             "https://www.linkedin.com/in/samartha-s-6b9b16197/"
         ],
-        gif:"https://media.giphy.com/media/gLLGj2bYYm2mm6nwVT/giphy.gif"},
+        gif:"/assets/team/samartha.gif"},
         {name:"Riya Yadav", pic:"/assets/team/riya.jpg",socials:[
             "https://open.spotify.com/playlist/3Xov4soblLZhZWAnKxxAWw?si=17e947a643bf4732","https://www.instagram.com/riiya_06/"
-        ],gif:"https://media.giphy.com/media/goQ4bc8X0Lh6w/giphy.gif"},
+        ],gif:"/assets/team/riya.gif"},
         {name:"Shree Charan", pic:"/assets/team/charan.jpg",socials:[
             "https://open.spotify.com/playlist/3S1Qe7JLZvSRcNuT1KfKHt?si=9fa3a68f69024523","https://www.linkedin.com/in/shree-charan-32b1781b2/",
             "https://github.com/ShreeCharan15"
         ]
-        ,gif:"https://media.giphy.com/media/VBoOBYLI7YtpkWRyli/giphy.gif"},
+        ,gif:"/assets/team/charan.gif"},
         {name:"Vandit Agarwal", pic:"/assets/team/vandit.jpg",socials:[
             "https://www.instagram.com/vandit_02/","https://www.linkedin.com/in/vandit-agarwal-9398841b6/"
         ],
