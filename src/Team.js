@@ -71,6 +71,21 @@ const CC=({bg})=>{
         "https://www.instagram.com/adityakumaaar/","https://www.linkedin.com/in/adityakumaaar/"]},
         {name:"Syed Sajjad", pic:"/assets/team/sajjad.jpg",role:"Vice President",gif:"/assets/team/sajjad.gif",
     socials:["https://open.spotify.com/playlist/1rDi7E6J0afEfjYckAZ5Vx?si=u7jw1OGJS-aLk6oKXY_4lA&utm_source=whatsapp&dl_branch=1","https://www.instagram.com/sajjad_wasti/","https://www.kaggle.com/sajjadwasti"]},
+    
+    {name:"Deeksha Jyothi", pic:"/assets/team/deeksha.jpg",role:"Non Technical Head",gif:"/assets/team/deeksha.gif",
+        socials:["https://open.spotify.com/user/o2mhpsa5sro0uyyessv9dax55/playlist/69FjSDHebKLw2A8T6Bkj73?si=OxMkfETgTXmAE9vUEoI9pA",
+        "https://www.linkedin.com/in/deekshajyothi-s-bba9381aa/","https://www.instagram.com/_._deeksha_.__/"]},
+
+    {name:"Akhila Abhijith", pic:"/assets/team/akhila.jpeg",role:"Non Technical Head",gif:"/assets/team/akhila.gif",
+    socials:["https://www.instagram.com/akhila_abhijith?r=nametag","https://www.linkedin.com/in/akhila-abhijith-37abb5183"]},
+
+    {name:"Saurabh Agarwal", pic:"/assets/team/saurabh.png",role:"Technical Head",gif:"/assets/team/saurabh.gif",
+        socials:["https://open.spotify.com/playlist/5r2HY3VK4ENEP9mnXYzGco?si=TbYl6kljQGS4ln8sdZuw3w&dl_branch=1","https://saurabh-agarwal10.github.io/portfolio.github.io/",
+        "https://www.instagram.com/_saurabhagarwal_/","https://www.linkedin.com/in/saurabh-agarwal-349334189/"]},
+    
+        {name:"Shreesha Bhat", pic:"/assets/team/shreesha.jpeg",role:"technical Head",gif:"/assets/team/shreesha.gif",
+    socials:["https://shreesha5102.github.io/","https://github.com/Shreesha5102","https://www.linkedin.com/in/bhat-shreesha/","https://www.instagram.com/b.shreesha5102/"]}
+    
     ]
     return core.map((c,index)=>{
         index+=1
@@ -143,7 +158,7 @@ const OC=({bg})=>{
         ],gif:"/assets/team/riya.gif"},
         {name:"Shree Charan", pic:"/assets/team/charan.jpg",socials:[
             "https://open.spotify.com/playlist/3S1Qe7JLZvSRcNuT1KfKHt?si=9fa3a68f69024523","https://www.linkedin.com/in/shree-charan-32b1781b2/",
-            "https://github.com/ShreeCharan15"
+            "https://www.instagram.com/shreecharan_/"
         ]
         ,gif:"/assets/team/charan.gif"},
         {name:"Vandit Agarwal", pic:"/assets/team/vandit.jpg",socials:[
