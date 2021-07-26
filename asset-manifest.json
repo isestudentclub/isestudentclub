@@ -5,8 +5,8 @@
     "main.css": "/static/css/main.7ad4011f.chunk.css",
     "main.js": "/static/js/main.91339330.chunk.js",
     "main.js.map": "/static/js/main.91339330.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d5fc6704.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d5fc6704.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f7e98122.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f7e98122.js.map",
     "static/js/3.a2f1dd55.chunk.js": "/static/js/3.a2f1dd55.chunk.js",
     "static/js/3.a2f1dd55.chunk.js.map": "/static/js/3.a2f1dd55.chunk.js.map",
     "static/js/4.e317d8f8.chunk.js": "/static/js/4.e317d8f8.chunk.js",
@@ -17,8 +17,8 @@
     "static/js/6.5a8b71f4.chunk.js.map": "/static/js/6.5a8b71f4.chunk.js.map",
     "static/js/7.3b874df1.chunk.js": "/static/js/7.3b874df1.chunk.js",
     "static/js/7.3b874df1.chunk.js.map": "/static/js/7.3b874df1.chunk.js.map",
-    "static/js/8.920c32ab.chunk.js": "/static/js/8.920c32ab.chunk.js",
-    "static/js/8.920c32ab.chunk.js.map": "/static/js/8.920c32ab.chunk.js.map",
+    "static/js/8.4dabacb1.chunk.js": "/static/js/8.4dabacb1.chunk.js",
+    "static/js/8.4dabacb1.chunk.js.map": "/static/js/8.4dabacb1.chunk.js.map",
     "static/js/9.40bc3dba.chunk.js": "/static/js/9.40bc3dba.chunk.js",
     "static/js/9.40bc3dba.chunk.js.map": "/static/js/9.40bc3dba.chunk.js.map",
     "static/js/10.3fe54f16.chunk.js": "/static/js/10.3fe54f16.chunk.js",
@@ -32,7 +32,7 @@
     "static/media/index.css": "/static/media/Valorant_Font.86ec8370.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.d5fc6704.js",
+    "static/js/runtime-main.f7e98122.js",
     "static/js/3.a2f1dd55.chunk.js",
     "static/css/main.7ad4011f.chunk.css",
     "static/js/main.91339330.chunk.js"
