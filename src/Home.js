@@ -1,4 +1,4 @@
-import { Box,Avatar, Center, useColorModeValue } from '@chakra-ui/react';
+import { Box,Avatar, Center, useColorModeValue, Heading } from '@chakra-ui/react';
 import AOS from 'aos'
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -16,7 +16,34 @@ const Home=()=>{
     return<div className="container text-center">
       <p cla data-aos="fade-up" className="gothic medium">Articles</p>
       <br/>
+      <div className="row text-center justify-content-center" >
+
+     <div className="col-12 col-md-4" data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100">
+              <Link  to="/chatwithdrmdakshayini" >
+                <Box className="row align-items-center"
+                  bg={secondaryBack}
+                  _hover={{shadow:"sm",bg:secondaryBackHover}}
+                  style={{border:"1px solid ",borderColor:borderColor,margin:"10px",padding:"20px 10px",borderRadius:"15px"}}>
+                    <div className="col-12">
+                      <Center>
+                      <Avatar size="xl" name="Yash" src="/assets/team/daks.png" />
+                      
+                      </Center>
+                    </div>
+                    <div className="col">
+                    <br/>
+                    <p className="body medium">Q & A with Dr. M Dakshayini</p>
+                    {/* <p className="body lighttext small">A rendezvous with the past vice president of ISE SC.</p> */}
+                    </div>
+                </Box>
+              </Link>
+            </div>
+            </div>
+            <br/><br/><br/>
+            <Heading>'21-'22</Heading>
      <div className="row text-center justify-content-center" >
+
+
             <div className="col-12 col-md-4"  data-aos="fade-up"  data-aos-duration="500" data-aos-delay="100">
             <Link  to="/team">
                 <Box className="row align-items-center" bg={secondaryBack}
@@ -75,6 +102,8 @@ const Home=()=>{
                 </Box>
               </Link>
             </div>
+
+            
        
      </div>
 

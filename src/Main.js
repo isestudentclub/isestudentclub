@@ -4,6 +4,8 @@ import { AnimatePresence } from 'framer-motion';
 import Landing from './LandingPage';
 import React from 'react';
 import withSuspense from './WithSuspense';
+const Daks=React.lazy(()=>import("./Daks"));
+
 const BlogPage=React.lazy(()=>import("./BlogPage"));
 const Team=React.lazy(()=>import("./Team"));
 const Yash=React.lazy(()=>import("./Yash"));
@@ -14,6 +16,7 @@ const Main=()=>{
         <Route exact path="/" component={()=><Landing></Landing>}></Route>
         <Route exact path="/qnamuskan" component={()=>withSuspense(<BlogPage></BlogPage>)}></Route>
         <Route exact path="/chatwithyash" component={()=>withSuspense(<Yash></Yash>)}></Route>
+        <Route exact path="/chatwithdrmdakshayini" component={()=>withSuspense(<Daks></Daks>)}></Route>
         <Route exact path="/team" component={()=>withSuspense(<Team></Team>)}></Route>
         <Redirect to="/"></Redirect>
       </Switch>
