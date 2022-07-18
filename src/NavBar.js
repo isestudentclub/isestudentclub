@@ -54,7 +54,13 @@ const NavBar=()=>{
                     </motion.div>
                     
                 </div>
-                <div className="col"></div>
+                <div className="col "></div>
+                <motion.div  initial={{ x: "300px" }}  transition={{ duration: 0.5,delay:0.5,type:"spring" }} animate={{ x: "0px" }} className="col-auto">
+                         <Link to="/" style={{fontSize:"15px", fontStyle:"bold"}} >Home</Link>
+                </motion.div>
+                <motion.div  initial={{ x: "250px" }}  transition={{ duration: 0.5,delay:0.5,type:"spring" }} animate={{ x: "0px" }} className="col-auto">
+                         <Link to="/events" style={{fontSize:"15px", fontStyle:"bold"}}>Our Events</Link>
+                </motion.div>
                 <motion.div  initial={{ x: "200px" }}  transition={{ duration: 0.5,delay:0.5,type:"spring" }} animate={{ x: "0px" }} className="col-auto">
                     <IconButton style={{borderRadius:"10px"}} icon={ic} onClick={toggleColorMode}></IconButton>
                 </motion.div>
